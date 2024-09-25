@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "f25549de-44d6-4666-ac4b-3114c963551e",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20813398"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"meet\",\r\n    \"email\":\"meet@gmail.com\",\r\n    \"password\":\"test@123\",\r\n    \"confirmPassword\":\"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:5000/api/users/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"meet@gmail.com\",\r\n    \"password\":\"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:5000/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "View Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmYzZGMxNWJmNzgxZDNkOTM0OTMyM2EiLCJpYXQiOjE3MjcyNTk1MzIsImV4cCI6MTcyNzM0NTkzMn0.ToD3lIqLDcu_uuftD17SdcFxDcLz98IxkuRejX5OgEY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/api/users/me"
+			},
+			"response": []
+		},
+		{
+			"name": "Random Joke",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmYzZGMxNWJmNzgxZDNkOTM0OTMyM2EiLCJpYXQiOjE3MjcyNjAxMTIsImV4cCI6MTcyNzM0NjUxMn0.UbpUgAgIRGvhdD3IXK8gwD4kriRiwyy3kWw1pIbuv0g"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/api/random-joke"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmYzZjE5OTA4Nzk1NmQwNzdiN2YxMjIiLCJpYXQiOjE3MjcyNjQwMTYsImV4cCI6MTcyNzM1MDQxNn0.oC2tBEdSA66iFXQFAzaMqvkJvWmz34HzROst4fcBAyM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "localhost:5000/api/users/logout"
+			},
+			"response": []
+		}
+	]
+}
